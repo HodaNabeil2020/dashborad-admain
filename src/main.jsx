@@ -19,6 +19,7 @@ import From from './Page/From/From';
 import Calendar from './Page/Calendar/Calendar';
 import FAQ from './Page/FAQ/FAQ';
 import BarChart from './Page/Barchark/BarChart';
+import PieChart from './Page/pieChart/PieChart';
 
 
 
@@ -34,9 +35,10 @@ const router = createBrowserRouter(
       <Route path="calendar" element={<Calendar />} />
 
       <Route path="faq" element={<FAQ />} />
-      <Route path='bar' element={<
+      <Route path="bar" element={<
         // @ts-ignore
         BarChart />} />
+      <Route path="pie" element={<PieChart />} />
     </Route>
   )
 );
