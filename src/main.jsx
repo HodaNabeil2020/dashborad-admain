@@ -20,6 +20,9 @@ import Calendar from './Page/Calendar/Calendar';
 import FAQ from './Page/FAQ/FAQ';
 import BarChart from './Page/Barchark/BarChart';
 import PieChart from './Page/pieChart/PieChart';
+import LinChart from './Page/LinChar/LinChart';
+import Geography from './Page/geography/Geography';
+import { Box } from '@mui/material';
 
 
 
@@ -28,7 +31,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Dashborad />} />
-      <Route path="team" element={<Team />} />
+      <Route path="team" element={<Box sx={{ overflow: "hidden" }}>
+        <Team />
+
+      </Box>} />
       <Route path="contacts" element={<Contant />} />
       <Route path="invoices" element={<Invoices />} />
       <Route path="form" element={<From />} />
@@ -39,6 +45,8 @@ const router = createBrowserRouter(
         // @ts-ignore
         BarChart />} />
       <Route path="pie" element={<PieChart />} />
+      <Route path="line" element={<LinChart />} />
+      <Route path="geography" element={<Geography />} />
     </Route>
   )
 );

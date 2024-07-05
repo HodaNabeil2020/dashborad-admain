@@ -93,7 +93,9 @@ const Team = () => {
     return (
         <
             // @ts-ignore
-            Box sm={{ height: 600, width: '96%', mx: "auto" }}>
+            Box sx={{ height: 600, width: "98%", mx: "auto" }}
+
+            sm={{ width: "97% " }} >
             <DataGrid rows={rows}
                 // @ts-ignore
                 columns={columns} />
